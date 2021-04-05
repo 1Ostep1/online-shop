@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -25,9 +27,36 @@ public class MainController {
         return "about";
     }
 
-    @GetMapping("/error")
-    public String error(Model model){
-        return "about";
+    @GetMapping("/men")
+    public String getMenProduct(Model model){
+        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Men");
+        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Men");
+        model.addAttribute("products",products);
+        model.addAttribute("shoes",shoes);
+
+        return "men";
     }
 
+    @GetMapping("/women")
+    public String getWomenProduct(Model model){
+        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Women");
+        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Women");
+        model.addAttribute("products",products);
+        model.addAttribute("shoes",shoes);
+
+        return "women";
+    }
+
+    @GetMapping("/add")
+    public String productAdd(Model model){
+        return "product-add";
+    }
+
+    @PostMapping("/add")
+    public String blogNewAdd(@RequestParam String name, @RequestParam String price,
+                             @RequestParam String info, @RequestParam String imageUrl, @RequestParam String types, @RequestParam String sex, Model model){
+        Product product = new Product(name,price,info,imageUrl,types,sex);
+        ProductRepo.save(product);
+        return "redirect:/";
+    }
 }
