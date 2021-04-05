@@ -25,5 +25,9 @@ public class MainController {
         return "about";
     }
 
+    @GetMapping("/error")
+    public String error(Model model){
+        return "about";
+    }
 
 }
