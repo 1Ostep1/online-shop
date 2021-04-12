@@ -1,12 +1,16 @@
 # Online Shop
 
+* [Heroku Link](#heroku-link)
 * [General info](#general-info)
 * [API Description](#API-Description)
 * [What is used](#What-is-used)
 * [Notes](#notes)
 * [Contact](#contact)
-* [Heroku Link](#heroku-link)
 
+
+## Heroku Link
+
+* https://greenshopala.herokuapp.com/
 
 
 ## General Info
@@ -33,9 +37,6 @@
 * Rest API
 * Swagger
 
-## Heroku Link
-
-* https://greenshopala.herokuapp.com/
 
 ## Notes
 
