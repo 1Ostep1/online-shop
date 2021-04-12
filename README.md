@@ -21,6 +21,9 @@
 * To view all man products you should access "/men"
 * To view all woman products you should access "/women"
 * To add products you should access "/add"
+* To edit product you should access "/product/{id}/edit"
+* To delete product you should access "/product/{id}/delete"
+* To see detail of product you should access "/product/{id}"
 
 ## What is used
 * MVC
