@@ -12,13 +12,14 @@ public class WomenProductController {
     @Autowired
     private productRepo ProductRepo;
 
-//    @GetMapping("/women")
-//    public String getWomenProduct(Model model){
-//        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Women");
-//        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Women");
-//        model.addAttribute("products",products);
-//        model.addAttribute("shoes",shoes);
-//
-//        return "women";
-//    }
+    @GetMapping("/women")
+    public String getWomenProduct(Model model){
+        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Women");
+        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Women");
+        Iterable<Product> all = ProductRepo.findAll();
+        model.addAttribute("products",products);
+        model.addAttribute("shoes",shoes);
+        model.addAttribute("all",all);
+        return "women";
+    }
 }

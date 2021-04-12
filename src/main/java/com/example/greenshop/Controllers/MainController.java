@@ -27,25 +27,6 @@ public class MainController {
         return "about";
     }
 
-    @GetMapping("/men")
-    public String getMenProduct(Model model){
-        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Men");
-        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Men");
-        model.addAttribute("products",products);
-        model.addAttribute("shoes",shoes);
-
-        return "men";
-    }
-
-    @GetMapping("/women")
-    public String getWomenProduct(Model model){
-        Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Women");
-        Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Women");
-        model.addAttribute("products",products);
-        model.addAttribute("shoes",shoes);
-
-        return "women";
-    }
 
     @GetMapping("/add")
     public String productAdd(Model model){
