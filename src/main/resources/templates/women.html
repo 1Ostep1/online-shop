@@ -63,6 +63,7 @@
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li th:text="${el.info}"></li>
                                 </ul>
+                                <a th:href="'/product/' + ${el.id}" class="btn btn-warning">More</a>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Buy</button>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -118,6 +119,7 @@
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li th:text="${el.info}"></li>
                                 </ul>
+                                <a th:href="'/product/' + ${el.id}" class="btn btn-warning">More</a>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Buy</button>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -58,6 +58,7 @@
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li th:text="${el.info}"></li>
                                 </ul>
+                                <a th:href="'/product/' + ${el.id}" class="btn btn-warning">More</a>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Buy</button>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -114,7 +115,7 @@
                                     <li th:text="${el.info}"></li>
                                 </ul>
 <!--                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy</button>-->
-
+                                <a th:href="'/product/' + ${el.id}" class="btn btn-warning">More</a>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Buy</button>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -154,19 +155,6 @@
         </div>
     </div>
 </div>
-<style>
-    .carousel .item {
-        height: 300px;
-    }
-
-    .item img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-height: 300px;
-    }
-
-</style>
 
 <!--<footer th:insert="blocks/footer :: footer"></footer>-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

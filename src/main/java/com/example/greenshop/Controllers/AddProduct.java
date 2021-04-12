@@ -6,11 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.Optional;
+
 @Controller
-public class addProduct {
+public class AddProduct {
+
     @Autowired
     private productRepo ProductRepo;
 
@@ -20,11 +25,22 @@ public class addProduct {
     }
 
     @PostMapping("/add")
-    public String blogNewAdd(@RequestParam String name, @RequestParam String price,
+    public String productNewAdd(@RequestParam String name, @RequestParam String price,
                              @RequestParam String info, @RequestParam String imageUrl, @RequestParam String types,@RequestParam String sex, Model model){
         Product product = new Product(name,price,info,imageUrl,types,sex);
         ProductRepo.save(product);
         return "redirect:/";
     }
 
+    @GetMapping("/product/{id}")
+    public String productDetails(@PathVariable(value = "id") long id, Model model){
+        if(!ProductRepo.existsById(id)){
+            return "redirect:/book";
+        }
+        Optional<Product> product = ProductRepo.findById(id);
+        ArrayList<Product> res = new ArrayList<>();
+        product.ifPresent(res::add);
+        model.addAttribute("product",res);
+        return "product-detail";
+    }
 }
