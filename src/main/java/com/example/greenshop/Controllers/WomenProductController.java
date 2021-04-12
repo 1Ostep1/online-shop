@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class WomenProductController {
+
     @Autowired
     private productRepo ProductRepo;
 
@@ -22,4 +23,5 @@ public class WomenProductController {
         model.addAttribute("carousel",carousel);
         return "women";
     }
+
 }
