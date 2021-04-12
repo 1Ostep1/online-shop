@@ -28,9 +28,9 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100"style="height:820px" src="https://i8.amplience.net/i/jpl/jd_030664_a?qlt=92" alt="First slide">
+            <img class="d-flex w-100"style="height:820px" src="https://i8.amplience.net/i/jpl/jd_030664_a?qlt=92" alt="First slide">
         </div>
-        <div class="carousel-item" th:each="el:${all}">
+        <div class="carousel-item" th:each="el:${carousel}">
             <img class="d-flex w-100" style="height:820px" th:src="${el.imageUrl}" alt="First slide">
         </div>
     </div>f

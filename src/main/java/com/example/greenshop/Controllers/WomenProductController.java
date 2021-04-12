@@ -16,10 +16,10 @@ public class WomenProductController {
     public String getWomenProduct(Model model){
         Iterable<Product> products = ProductRepo.findAllByTypesAndSex("Clothes","Women");
         Iterable<Product> shoes = ProductRepo.findAllByTypesAndSex("Shoes","Women");
-        Iterable<Product> all = ProductRepo.findAll();
+        Iterable<Product> carousel = ProductRepo.findAllByTypesAndSex("carousel","Women");
         model.addAttribute("products",products);
         model.addAttribute("shoes",shoes);
-        model.addAttribute("all",all);
+        model.addAttribute("carousel",carousel);
         return "women";
     }
 }

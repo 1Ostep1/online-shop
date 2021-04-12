@@ -14,17 +14,17 @@ public class addProduct {
     @Autowired
     private productRepo ProductRepo;
 
-//    @GetMapping("/add")
-//    public String productAdd(Model model){
-//        return "product-add";
-//    }
-//
-//    @PostMapping("/add")
-//    public String blogNewAdd(@RequestParam String name, @RequestParam String price,
-//                             @RequestParam String info, @RequestParam String imageUrl, @RequestParam String types,@RequestParam String sex, Model model){
-//        Product product = new Product(name,price,info,imageUrl,types,sex);
-//        ProductRepo.save(product);
-//        return "redirect:/";
-//    }
+    @GetMapping("/add")
+    public String productAdd(Model model){
+        return "product-add";
+    }
+
+    @PostMapping("/add")
+    public String blogNewAdd(@RequestParam String name, @RequestParam String price,
+                             @RequestParam String info, @RequestParam String imageUrl, @RequestParam String types,@RequestParam String sex, Model model){
+        Product product = new Product(name,price,info,imageUrl,types,sex);
+        ProductRepo.save(product);
+        return "redirect:/";
+    }
 
 }
