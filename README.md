@@ -12,7 +12,7 @@
 <img width="898" alt="Screen Shot 2021-04-15 at 5 46 19 PM" src="https://user-images.githubusercontent.com/60435025/114864206-87361300-9e12-11eb-92ca-5118cb76d7e1.png">
 <img width="898" alt="Screen Shot 2021-04-15 at 5 46 57 PM" src="https://user-images.githubusercontent.com/60435025/114864254-961cc580-9e12-11eb-8f18-518adbd52172.png">
 <img width="1440" alt="Screen Shot 2021-04-15 at 5 47 23 PM" src="https://user-images.githubusercontent.com/60435025/114864476-daa86100-9e12-11eb-841f-fe9d1973bb08.png">
-![Screen Shot 2021-04-15 at 5 47 54 PM](https://user-images.githubusercontent.com/60435025/114864496-e09e4200-9e12-11eb-823e-408bdb792b0d.png)
+<img width="1440" alt="Screen Shot 2021-04-15 at 5 48 11 PM" src="https://user-images.githubusercontent.com/60435025/114864496-e09e4200-9e12-11eb-823e-408bdb792b0d.png">
 <img width="1440" alt="Screen Shot 2021-04-15 at 5 48 11 PM" src="https://user-images.githubusercontent.com/60435025/114864528-e98f1380-9e12-11eb-91c8-43cd09be23f0.png">
 <img width="1440" alt="Screen Shot 2021-04-15 at 5 48 23 PM" src="https://user-images.githubusercontent.com/60435025/114864532-eac04080-9e12-11eb-8e87-576adcd2fbd1.png">
 <img width="1440" alt="Screen Shot 2021-04-15 at 5 48 28 PM" src="https://user-images.githubusercontent.com/60435025/114864534-eb58d700-9e12-11eb-828f-8c8e6017334b.png">
